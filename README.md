@@ -17,4 +17,4 @@ Instructions to come...
 ## 🛠 Dependencies
 * [Inquirer](https://www.npmjs.com/package/inquirer) - command line interaction
 * [Axios](https://www.npmjs.com/package/axios) - fetch data from APIs
-* [Chalk](https://www.npmjs.com/package/chalk) - add coloration to console# booksearchCLI
+* [Chalk](https://www.npmjs.com/package/chalk) - add coloration to console

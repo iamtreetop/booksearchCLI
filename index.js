@@ -32,6 +32,10 @@ const main = async () => {
         console.log("Beep Boop Beep Boop...");
         await selectBook(query);
         break;
+      case "list":
+        console.log("Beep Boop Beep Boop...");
+        // await selectBook(query);
+        break;
       default:
         console.log("Beep Boop Beep Boop");
     }
@@ -41,3 +45,13 @@ const main = async () => {
 };
 
 main();
+
+// function main async () {
+//     // get books from api
+//     const books = await fetchBooks(query);
+//     // list book should just parse data and spit out an array
+//     const bookList = listBooks(books);
+//     // select book would prompt for user input but pass in book list so it
+//     // knows what to show
+//     selectBook(bookList);
+// }
