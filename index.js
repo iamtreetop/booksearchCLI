@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const { fetchBooks } = require("./lib/books.js")
+const { selectBook } = require("./lib/books.js");
 
 const firstQuestion = [
   {
@@ -29,8 +29,8 @@ const main = async () => {
 
     switch (action) {
       case "search":
-        console.log("Search is working")
-        await fetchBooks(query);
+        console.log("Beep Boop Beep Boop...");
+        await selectBook(query);
         break;
       default:
         console.log("Beep Boop Beep Boop");
