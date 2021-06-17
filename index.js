@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
-const { selectBook } = require("./lib/books.js");
+const { selectBook } = require("./lib/books");
+const { getReadingList } = require("./lib/readingList");
+const chalk = require("chalk");
 
 const firstQuestion = [
   {
@@ -8,13 +10,14 @@ const firstQuestion = [
     message: "What would you like to do?",
     choices: [
       { name: "Search for book", value: "search" },
+      { name: "See Reading List", value: "list" },
     ],
   },
   {
     type: "input",
     name: "query",
     message: "Search by title:",
-    if (answers) {
+    when (answers) {
       return answers.action === "search";
     },
   },
@@ -29,29 +32,19 @@ const main = async () => {
 
     switch (action) {
       case "search":
-        console.log("Beep Boop Beep Boop...");
+        console.log(chalk.green("Beep Boop Beep Boop..."));
         await selectBook(query);
         break;
       case "list":
-        console.log("Beep Boop Beep Boop...");
-        // await selectBook(query);
+        console.log(chalk.green("Eee errr Eee errr..."));
+        getReadingList();
         break;
       default:
-        console.log("Beep Boop Beep Boop");
+        console.log("Please select one");
     }
   } catch (err) {
-    throw new Error(err);
+    console.log(chalk.red("An unexpected error has occured"));
   }
 };
 
 main();
-
-// function main async () {
-//     // get books from api
-//     const books = await fetchBooks(query);
-//     // list book should just parse data and spit out an array
-//     const bookList = listBooks(books);
-//     // select book would prompt for user input but pass in book list so it
-//     // knows what to show
-//     selectBook(bookList);
-// }
