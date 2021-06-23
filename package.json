@@ -4,7 +4,7 @@
   "description": "Command Line Book Search",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "Tri Ta",
@@ -13,5 +13,8 @@
     "axios": "^0.21.1",
     "chalk": "^4.1.1",
     "inquirer": "^8.1.1"
+  },
+  "devDependencies": {
+    "jest": "^27.0.5"
   }
 }
